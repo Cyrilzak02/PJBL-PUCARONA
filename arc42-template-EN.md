@@ -21,140 +21,53 @@ concepts. For documentation of your own system you use better the
 
 # Introduction and Goals
 
-Describes the relevant requirements and the driving forces that software
-architects and development team must consider. These include
+O objetivo deste projeto é desenvolver e implementar um aplicativo móvel que simplifique a organização de caronas entre estudantes universitários. A proposta visa promover a mobilidade sustentável e segura dentro das comunidades acadêmicas, incentivando o compartilhamento de veículos entre os alunos. Com funcionalidades intuitivas e de fácil acesso, o aplicativo permitirá que os usuários encontrem e ofereçam caronas de maneira eficiente, contribuindo para a redução do número de veículos em circulação, diminuindo a pegada de carbono e fortalecendo os laços sociais entre os membros da comunidade universitária.
 
--   underlying business goals,
-
--   essential features,
-
--   essential functional requirements,
-
--   quality goals for the architecture and
-
--   relevant stakeholders and their expectations
+| Prioridade   |      Objetivos      |  
+|----------|:-------------:|
+| 1 |  O sistema deve ser projetado para ser escalável | 
+| 2 |    O sistema deve implementar um chat em tempo real   |   
+| 3 | O sistema deve implementar uma carteira virtual | 
+| 4 | O sistema deve implementar geolocalização através de uma API | 
+| 5 | O sistema deve ser capaz de autenticar alunos |   
 
 ## Requirements Overview
 
-<div class="formalpara-title">
-
-**Contents**
-
-</div>
-
-Short description of the functional requirements, driving forces,
-extract (or abstract) of requirements. Link to (hopefully existing)
-requirements documents (with version number and information where to
-find it).
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-From the point of view of the end users a system is created or modified
-to improve support of a business activity and/or improve the quality.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-Short textual description, probably in tabular use-case format. If
-requirements documents exist this overview should refer to these
-documents.
-
-Keep these excerpts as short as possible. Balance readability of this
-document with potential redundancy w.r.t to requirements documents.
-
-See [Introduction and Goals](https://docs.arc42.org/section-1/) in the
-arc42 documentation.
+| Requisitos   |      Descrição      |  
+|----------|:-------------:|
+| F1 |  **Cadastro de usuário**: O aplicativo deve permitir que estudantes se cadastrem fornecendo informações pessoais, como nome, foto e matrícula | 
+| F1.1 |    **Cadastro de usuário**: O aplicativo deve permitir aos usuários inserir dados adicionais relacionados ao veículo, quando aplicável     |   
+| F3 | **Sistema de avaliação**: O aplicativo deve implementar um sistema de avaliação bidirecional entre passageiros e motoristas | 
+| F4 | **Sistema de geolocalização**: O aplicativo deve implementar um sistema de geolocalização para atualizar as posições dos usuários e otimizar rotas de carona | 
+| F5 | **Sistema de notificações**: O aplicativo deve enviar notificações em tempo real para informar os usuários sobre solicitações de carona, confirmações, cancelamentos e atualizações de rota|   
 
 ## Quality Goals
 
-<div class="formalpara-title">
+| **Categoria de Qualidade**        | **Qualidade**              | **Descrição**                                                                                                  | **Cenário**  |
+|-----------------------------------|----------------------------|----------------------------------------------------------------------------------------------------------------|--------------|
+| **Usabilidade**                   | **Facilidade de Uso**  | O aplicativo deve ser fácil de navegar tanto para motoristas quanto para passageiros, especialmente em situações de alto tráfego. | SC1          |
+|                                   | **Facilidade de Aprendizado** | A interface deve ser intuitiva para novos usuários, exigindo orientação mínima para entender as funcionalidades principais. |           |
+| **Desempenho**                    | **Precisão**           | O rastreamento de localização e as estimativas de viagem devem ser precisas, dentro de uma pequena margem de erro. |        SC2      |    
+|                                   | **Velocidade & Responsividade** | O aplicativo deve carregar e processar solicitações rapidamente, com latência mínima durante os horários de pico. |           |          |
+| **Segurança**                     | **Segurança nas Transações**  | Os processos de pagamento devem ser seguros, garantindo transações seguras para motoristas e passageiros.  | SC3          |                     
+| **Legal**                         | **Conformidade Regulamentar** | O aplicativo deve aderir às leis locais de transporte e privacidade de dados em todas as regiões de operação.   | SC4          |
 
-**Contents**
+| **Id** | **Cenário** |
+|--------|-------------|
+| SC1    | Um novo usuário pode completar o registro e reservar sua primeira viagem em até 5 minutos após instalar o aplicativo. |
+| SC2    | O aplicativo funciona suavemente e rastreia a localização com precisão, mesmo em áreas com cobertura de rede fraca. |
+| SC3    | O aplicativo faz operações sobre o saldo da carteira virtual com precisão |
+| SC4    | O aplicativo fornece um documento de termos de uso que contém as suas obrigações legais |
 
-</div>
-
-The top three (max five) quality goals for the architecture whose
-fulfillment is of highest importance to the major stakeholders. We
-really mean quality goals for the architecture. Don’t confuse them with
-project goals. They are not necessarily identical.
-
-Consider this overview of potential topics (based upon the ISO 25010
-standard):
-
-![Categories of Quality
-Requirements](images/01_2_iso-25010-topics-EN.drawio.png)
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-You should know the quality goals of your most important stakeholders,
-since they will influence fundamental architectural decisions. Make sure
-to be very concrete about these qualities, avoid buzzwords. If you as an
-architect do not know how the quality of your work will be judged…
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-A table with quality goals and concrete scenarios, ordered by priorities
 
 ## Stakeholders
-
-<div class="formalpara-title">
-
-**Contents**
-
-</div>
-
-Explicit overview of stakeholders of the system, i.e. all person, roles
-or organizations that
-
--   should know the architecture
-
--   have to be convinced of the architecture
-
--   have to work with the architecture or with code
-
--   need the documentation of the architecture for their work
-
--   have to come up with decisions about the system or its development
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-You should know all parties involved in development of the system or
-affected by the system. Otherwise, you may get nasty surprises later in
-the development process. These stakeholders determine the extent and the
-level of detail of your work and its results.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-Table with role names, person names, and their expectations with respect
-to the architecture and its documentation.
-
-| Role/Name   | Contact        | Expectations       |
-|-------------|----------------|--------------------|
-| *\<Role-1>* | *\<Contact-1>* | *\<Expectation-1>* |
-| *\<Role-2>* | *\<Contact-2>* | *\<Expectation-2>* |
+| **Nome**               | **Contato**                | **Expectativas**                                                                                         |
+|------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------|
+| Gerente de Produto     | gerente.produto@gmail.com  | Espera que o aplicativo atenda às necessidades do mercado, seja fácil de usar e proporcione uma boa experiência ao usuário. |
+| Equipe de Desenvolvimento | dev.team@gmail.com       | Espera que os requisitos sejam claros e bem documentados, e que haja tempo suficiente para implementar funcionalidades. |
+| Usuários Finais         | usuarios@gmail.com        | Esperam que o aplicativo seja confiável, rápido, fácil de navegar e atenda às suas necessidades de transporte diário. |
+| Motoristas             | motoristas@gmail.com       | Esperam que o aplicativo ofereça um sistema de pagamento justo, suporte eficiente e oportunidades de ganho estáveis. |
+| Investidores           | investidores@gmail.com     | Esperam um retorno financeiro positivo
 
 # Architecture Constraints
 
