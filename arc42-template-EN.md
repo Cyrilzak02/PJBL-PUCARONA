@@ -97,14 +97,17 @@ always be dealt with; they may be negotiable, though.
 **Form**
 
 </div>
-
-Simple tables of constraints with explanations. If needed you can
-subdivide them into technical constraints, organizational and political
-constraints and conventions (e.g. programming or versioning guidelines,
-documentation or naming conventions)
-
-See [Architecture Constraints](https://docs.arc42.org/section-2/) in the
-arc42 documentation.
+| **Category**                | **Constraints**                               | **Description**                                                                                      | **Scenario**  |
+|-----------------------------|-----------------------------------------------|------------------------------------------------------------------------------------------------------|---------------|
+| **Cloud Platform**          | **Azure Dependency**                         | The system depends on Azure infrastructure, with its limitations and service policies.                | C1            |
+| **Container Management**    | **Docker & Kubernetes**                      | Container orchestration imposes the need for compatibility and efficient monitoring.                 | C2            |
+| **Data Storage**            | **MongoDB and SQL Database**                 | The hybrid architecture must ensure consistency between non-relational and relational data.          | C3            |
+| **Monitoring**              | **New Relic Usage**                          | Performance metrics and logs will be managed and monitored by New Relic.                              | C4            |
+| **Scalability**             | **Replication and Distribution**             | Services must be easily scalable using Kubernetes, ensuring high availability.                       | C5            |
+| **High Availability**       | **Real-time Chat and Notifications**         | The system must ensure high availability to support real-time communication and instant notifications.| C6            |
+| **Security**                | **Student Authentication**                   | The authentication system must protect personal data and comply with security standards.             | C7            |
+| **Security**                | **Virtual Wallet**                          | Financial security and transaction integrity must be ensured.                                         | C8            |
+| **Geolocation**             | **Geolocation API**                          | Limitations imposed by the geolocation API must be considered for accuracy and request handling.     | C9            |
 
 # System Scope and Context
 
