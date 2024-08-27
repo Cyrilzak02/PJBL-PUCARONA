@@ -13,7 +13,9 @@ This version of the template contains some help and explanations. It is used for
 
 O objetivo deste projeto é desenvolver e implementar um aplicativo móvel que simplifique a organização de caronas entre estudantes universitários. A proposta visa promover a mobilidade sustentável e segura dentro das comunidades acadêmicas, incentivando o compartilhamento de veículos entre os alunos. Com funcionalidades intuitivas e de fácil acesso, o aplicativo permitirá que os usuários encontrem e ofereçam caronas de maneira eficiente, contribuindo para a redução do número de veículos em circulação, diminuindo a pegada de carbono e fortalecendo os laços sociais entre os membros da comunidade universitária.
 
-**[Sytem Design](https://lucid.app/lucidchart/45490cdb-a854-421d-882d-b4308453c515/edit?viewport_loc=-2625%2C-675%2C4870%2C2126%2C0_0&invitationId=inv_085c1335-7e13-452c-94fc-d7ad48468d4e)**
+**System Design**
+
+[Sytem Design](https://lucid.app/lucidchart/45490cdb-a854-421d-882d-b4308453c515/edit?viewport_loc=-2625%2C-675%2C4870%2C2126%2C0_0&invitationId=inv_085c1335-7e13-452c-94fc-d7ad48468d4e)
 
 
 
