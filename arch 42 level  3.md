@@ -13,6 +13,7 @@ This version of the template contains some help and explanations. It is used for
 
 O objetivo deste projeto é desenvolver e implementar um aplicativo móvel que simplifique a organização de caronas entre estudantes universitários. A proposta visa promover a mobilidade sustentável e segura dentro das comunidades acadêmicas, incentivando o compartilhamento de veículos entre os alunos. Com funcionalidades intuitivas e de fácil acesso, o aplicativo permitirá que os usuários encontrem e ofereçam caronas de maneira eficiente, contribuindo para a redução do número de veículos em circulação, diminuindo a pegada de carbono e fortalecendo os laços sociais entre os membros da comunidade universitária.
 
+![Uploading system diagram (1).png…]()
 
 
 
@@ -23,6 +24,8 @@ O objetivo deste projeto é desenvolver e implementar um aplicativo móvel que s
 | 3          | O sistema deve implementar uma carteira virtual    |
 | 4          | O sistema deve implementar geolocalização através de uma API |
 | 5          | O sistema deve ser capaz de autenticar alunos      |
+
+
 
 
 ## Requirements Overview
@@ -102,6 +105,13 @@ O objetivo deste projeto é desenvolver e implementar um aplicativo móvel que s
 | Servidor Backend        | HTTP/HTTPS                  | Processamento de requisições, respostas de API    |
 | Sistema de Notificações | WebSockets                  | Envio de notificações em tempo real               |
 | Banco de Dados          | Conexão de rede (TCP/IP)    | Armazenamento e recuperação de dados do usuário   |
+
+**Diagrama C4 Nivel 1 **
+
+[![](https://mermaid.ink/img/pako:eNqtU81q20AQfpVhTw6oRrYlS9YtuKH0UAg1uRRBGaSxsqDdVfcn2DF-mD5LX6wjS7brpIceqot2fr5vvpndOYjK1CQKsU7WRnva-VIDf176lmB0wUeJjUUFW2NhjdZohPuuK_WQ-0jWGT0JjmwEpXhy4ddPK00p_rSgNoBdKyv08sXAj0DQcWVgEAQFynhjpfMIJkCHzmFD0pppKe6GIpu986Qm7vTriVkAMH6Q44Zi99cCHVrmsg1q-YoWqiENSHtLEEZRbuC_aQNrJfWJrD-wJIu1sSP_xQUGnOylIBA0ZElXkp0Oas6-oR2Ef3_Y-QmPkqzGdnNpYjNycCOP2KBieWbs5RwaQGNDnTUV8XAsm-d0mDgCTb3_1NTd26H9pfbsTfEH_dJfER8Uyvb_CfhK7fgurhf35PAmPg78mvBpHOdN1jn8foaf-Y3y64TKqH9AzN5DRCQUWW685j049ASl8M-kqBQFH2vaYmh9KUp95FQM3mz2uhKFt4EiYU1onkWxxdaxFboaPY37cvF2qL8Zo84QNkVxEDtRzJNpGi_TVTafxatllswjsRfFhyyZLrIkixd5nsZJkufHSLyeCOLpapHEaZovk5whyWIZCaolL8-XYY9P63z8DapVTJ4?type=png)](https://mermaid.live/edit#pako:eNqtU81q20AQfpVhTw6oRrYlS9YtuKH0UAg1uRRBGaSxsqDdVfcn2DF-mD5LX6wjS7brpIceqot2fr5vvpndOYjK1CQKsU7WRnva-VIDf176lmB0wUeJjUUFW2NhjdZohPuuK_WQ-0jWGT0JjmwEpXhy4ddPK00p_rSgNoBdKyv08sXAj0DQcWVgEAQFynhjpfMIJkCHzmFD0pppKe6GIpu986Qm7vTriVkAMH6Q44Zi99cCHVrmsg1q-YoWqiENSHtLEEZRbuC_aQNrJfWJrD-wJIu1sSP_xQUGnOylIBA0ZElXkp0Oas6-oR2Ef3_Y-QmPkqzGdnNpYjNycCOP2KBieWbs5RwaQGNDnTUV8XAsm-d0mDgCTb3_1NTd26H9pfbsTfEH_dJfER8Uyvb_CfhK7fgurhf35PAmPg78mvBpHOdN1jn8foaf-Y3y64TKqH9AzN5DRCQUWW685j049ASl8M-kqBQFH2vaYmh9KUp95FQM3mz2uhKFt4EiYU1onkWxxdaxFboaPY37cvF2qL8Zo84QNkVxEDtRzJNpGi_TVTafxatllswjsRfFhyyZLrIkixd5nsZJkufHSLyeCOLpapHEaZovk5whyWIZCaolL8-XYY9P63z8DapVTJ4)
+
+*Diagrama C4 Nivel 2 **
+[![](https://mermaid.ink/img/pako:eNqVVc1O20AQfpXVnqiUoiaEOOTGnygSSCkOlypSNdiDWdXedXfXgYDyMFUPSFxRnyAv1tn1D04wh_q0P9_MfDPzjfeJRypGPuHHw2MlLQiJei4ZfVbYFNmJgERDBixG5gDrF4dAw3LQwBQ7zFMRgRUL5RGglYS5LD1MURsldwqDusfm_NoU699aqDlv71isGLw5-VUgy4kRIyNWZCxTVmlhLMUqKKYxkKDQanfOP9VhwqWxmP04UoWMQS93jN-7GF3kDFmyp9LSfU3WO_d4c5jnm3Yl16m6R013pty23PoqCGlRw_p5_cdnU9SZLQQwCQtMIFa6ZPw-6g1EP1HGzm-IeiEI6sgelcdV_KW9U7Jcn1H1ZUSegaXr14SIOLjEZP0aCWUYslulJUbIDqfndZtMq8TmIyYxWLgBgy7KEcjIF-2EuBsWfrsoozeLQ53BI0oK7gEaU6DwEoRhkcoU1YRoZK4of0ks5KiuiumxqGxEj7hmKF1HpYdEd2A3yXWwG3TQu1QyUSc3JbONzRZNCeo91fKKnJ2hSlUEqXgsm_nGZbUlaYgzIb1_tyB5atfiKmRzRONhhNMiUKZJ3TcXy0XskPDpg90htEjDRsJh5YDoncqF8EmfOkilRa-Z9bM_xxqAbUDN4IFEKivFOiToCuf1o6y4JYFs5d3ilcOSmmU7mU0hAXepOkjlWkVIY-vv_cE2uItgbaVb8HbBrjCt_itvU3ttoPT4dTabhk0ODlqDWsN2rLJCuumhSpRmV6fhzA3NhmVj0Z6Oi_ULdRRNpHGBpXGjSN_bDReVWFqx3yTyEeF3YQf_F7fD05awnJqgVkBTg_ByNu0m8q7_5_TXo6fBzdB2FrzHM6TJEzE9LP5fO-f2DjPiPKFljLdQpHbO53JFUCisCpcy4hOrC-xxrYrkjk9uIaVq8yKnEmD1DDWnOcjvSmW1CW355Ik_8MnnvS-7o2AUHPQPgtFoODzo8SWdDgaD3fF4OAj2Bvv9YD8Yrnr80Tvo7_ZH4_4o6I-H43HQ3x8MexxjQa_OZfkw-vdx9Q_ku2io?type=png)](https://mermaid.live/edit#pako:eNqVVc1O20AQfpXVnqiUoiaEOOTGnygSSCkOlypSNdiDWdXedXfXgYDyMFUPSFxRnyAv1tn1D04wh_q0P9_MfDPzjfeJRypGPuHHw2MlLQiJei4ZfVbYFNmJgERDBixG5gDrF4dAw3LQwBQ7zFMRgRUL5RGglYS5LD1MURsldwqDusfm_NoU699aqDlv71isGLw5-VUgy4kRIyNWZCxTVmlhLMUqKKYxkKDQanfOP9VhwqWxmP04UoWMQS93jN-7GF3kDFmyp9LSfU3WO_d4c5jnm3Yl16m6R013pty23PoqCGlRw_p5_cdnU9SZLQQwCQtMIFa6ZPw-6g1EP1HGzm-IeiEI6sgelcdV_KW9U7Jcn1H1ZUSegaXr14SIOLjEZP0aCWUYslulJUbIDqfndZtMq8TmIyYxWLgBgy7KEcjIF-2EuBsWfrsoozeLQ53BI0oK7gEaU6DwEoRhkcoU1YRoZK4of0ks5KiuiumxqGxEj7hmKF1HpYdEd2A3yXWwG3TQu1QyUSc3JbONzRZNCeo91fKKnJ2hSlUEqXgsm_nGZbUlaYgzIb1_tyB5atfiKmRzRONhhNMiUKZJ3TcXy0XskPDpg90htEjDRsJh5YDoncqF8EmfOkilRa-Z9bM_xxqAbUDN4IFEKivFOiToCuf1o6y4JYFs5d3ilcOSmmU7mU0hAXepOkjlWkVIY-vv_cE2uItgbaVb8HbBrjCt_itvU3ttoPT4dTabhk0ODlqDWsN2rLJCuumhSpRmV6fhzA3NhmVj0Z6Oi_ULdRRNpHGBpXGjSN_bDReVWFqx3yTyEeF3YQf_F7fD05awnJqgVkBTg_ByNu0m8q7_5_TXo6fBzdB2FrzHM6TJEzE9LP5fO-f2DjPiPKFljLdQpHbO53JFUCisCpcy4hOrC-xxrYrkjk9uIaVq8yKnEmD1DDWnOcjvSmW1CW355Ik_8MnnvS-7o2AUHPQPgtFoODzo8SWdDgaD3fF4OAj2Bvv9YD8Yrnr80Tvo7_ZH4_4o6I-H43HQ3x8MexxjQa_OZfkw-vdx9Q_ku2io)
 
 
 # Solution Strategy
