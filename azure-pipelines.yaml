@@ -19,7 +19,7 @@ stages:
    
     - task: Docker@2
       inputs:
-        containerRegistry: 'DockerConnection'
+        containerRegistry: 'PUCarona Docker Hub'
         repository: 'Cyrilzak02/PJBL-PUCARONA'
         command: 'buildAndPush'
         tags: '$(Build.BuildId)'
