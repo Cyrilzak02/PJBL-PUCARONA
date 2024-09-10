@@ -70,3 +70,57 @@ def get_corrida(id):
 
     except Exception as e:
         return jsonify({"error": str(e)}), 400
+
+
+@corrida_controller.route('/deletar_corrida/<int:id>', methods=['DELETE'])
+def deletar_corrida(id):
+    try:
+        corrida = Corrida.query.get(id)
+        if corrida:
+            db.session.delete(corrida)
+            db.session.commit()
+            return jsonify({"message": "Corrida deletada com sucesso!"}), 204
+
+        else:
+            return jsonify({"message": "Corrida não encontrada"}), 404
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+@corrida_controller.route('/update_corrida_origem/<int:id>', methods=["PUT"])
+def update_corrida_origem(id):
+
+    try:
+        corrida = Corrida.query.get(id)
+        if corrida:
+            data = request.json
+            end_origem = data.get('end_origem')
+
+            corrida.end_origem = end_origem
+            db.session.commit()
+            return jsonify({"message": "Endereco de origem atualizado com sucesso!"}), 200
+
+        else:
+            return jsonify({"message": "Corrida não encontrada"}), 404
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+@corrida_controller.route('/update_corrida_fim/<int:id>', methods=["PUT"])
+def update_corrida_fim(id):
+
+    try:
+        corrida = Corrida.query.get(id)
+        if corrida:
+            data = request.json
+            end_fim = data.get('end_fim')
+
+            corrida.end_fim = end_fim
+            db.session.commit()
+            return jsonify({"message": "Endereco de destino atualizado com sucesso!"}), 200
+
+        else:
+            return jsonify({"message": "Corrida não encontrada"}), 404
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
