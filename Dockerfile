@@ -8,8 +8,8 @@ ENV PYTHONUNBUFFERED=1
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container
-COPY ./PUCarona/requirements.txt /app/
+# Copy the requirements file into the container (update the path)
+COPY ./requirements.txt /app/
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
