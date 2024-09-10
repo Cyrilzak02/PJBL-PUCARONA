@@ -1,33 +1,26 @@
-from idlelib.macosx import addOpenEventSupport
-
-from flask import Flask, jsonify
-from flask_mysqldb import MySQL
+from flask import Flask
+from Entities.Corrida import db
+from Controllers.ControllerCorrida import corrida_controller
 
 app = Flask(__name__)
 
-app.config['MYSQL_HOST']='localhost'
-app.config['MYSQL_PORT']=3306
-app.config['MYSQL_USER']='root'
-app.config['MYSQL_PASSWORD']='1234'
-app.config['MYSQL_DB']='pucaronas'
+# Configurações do banco de dados
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1234@localhost/pucaronas'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-mysql = MySQL(app)
+# Inicializar SQLAlchemy
+db.init_app(app)
 
-@app.route('/getAlunos')
-def getAlunos():  # put application's code here
-    cur = mysql.connection.cursor()
-    cur.execute("SELECT * FROM aluno")
-    data = cur.fetchall()
-    cur.close()
-    return jsonify(data)
+# Registrar o blueprint
+app.register_blueprint(corrida_controller)
 
+# Criar tabelas no banco de dados
+with app.app_context():
+    db.create_all()
 
-
-@app.route('/')
-def fuck():
-    return 'Fuck'
-
-
+@app.route("/")
+def fuck_you():
+    return "Fuck you"
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
