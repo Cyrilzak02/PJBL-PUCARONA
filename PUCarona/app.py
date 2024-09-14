@@ -19,7 +19,7 @@ app.register_blueprint(corrida_controller)
 with app.app_context():
     db.create_all()
 
-@app.route('/' , method['GET'])
+@app.route('/' , methods = ['GET'])
 def index():
     return "Welcome to pucaronas"
 
