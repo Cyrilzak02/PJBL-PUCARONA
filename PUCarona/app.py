@@ -18,7 +18,7 @@ app.register_blueprint(corrida_controller)
 with app.app_context():
     db.create_all()
 
-app.register_blueprint(corrida_controller)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
