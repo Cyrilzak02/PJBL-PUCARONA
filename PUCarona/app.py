@@ -18,7 +18,9 @@ app.register_blueprint(corrida_controller)
 with app.app_context():
     db.create_all()
 
-
+@app.route('/')
+def index():
+    return "Welcome to pucaronas"
 
 if __name__ == '__main__':
     app.run(debug=True)
