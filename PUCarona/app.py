@@ -5,7 +5,7 @@ from Controllers.ControllerCorrida import corrida_controller
 app = Flask(__name__)
 
 # Configurações do banco de dados
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:1234@localhost/pucaronas'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:1234@127.0.0.1/pucaronas'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Inicializar SQLAlchemy
