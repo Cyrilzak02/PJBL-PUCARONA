@@ -1,3 +1,4 @@
+from Tools.scripts.make_ctype import method
 from flask import Flask
 from Entities.Corrida import db
 from Controllers.ControllerCorrida import corrida_controller
@@ -18,7 +19,7 @@ app.register_blueprint(corrida_controller)
 with app.app_context():
     db.create_all()
 
-@app.route('/')
+@app.route('/' , method['GET'])
 def index():
     return "Welcome to pucaronas"
 
