@@ -1,12 +1,15 @@
 # Use the official Python image from DockerHub as the base image
 FROM python:3.10-slim
 
+
+
 # Set environment variables to avoid writing .pyc files and enable unbuffered output
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Install pyodbc
-RUN pip install pyodbc
+RUN apt-get update && \
+    apt-get install -y unixodbc unixodbc-dev libodbc1 odbcinst && \
+    pip install pyodbc
 
 # Set the working directory in the container
 WORKDIR /app
