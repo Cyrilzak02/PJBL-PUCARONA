@@ -13,7 +13,7 @@ password = '1234puc$'
 
 DATABASE_URI = (
     f'mssql+pyodbc://{username}:{password}@{server}/{database}?'
-    'driver=ODBC+Driver+18+for+SQL+Server&Encrypt=yes;TrustServerCertificate=no'
+    'driver=ODBC+Driver+18+for+SQL+Server&Encrypt=yes&TrustServerCertificate=yes'
 )
 
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
