@@ -5,18 +5,6 @@ FROM python:3.10-slim
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Install required system dependencies for ODBC Driver
-RUN apt-get update && apt-get install -y \
-    curl \
-    gnupg \
-    unixodbc-dev
-
-# Install the Microsoft ODBC Driver for SQL Server
-RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.asc.gpg && \
-    curl https://packages.microsoft.com/config/debian/buster/prod.list > /etc/apt/sources.list.d/mssql-release.list && \
-    apt-get update && \
-    ACCEPT_EULA=Y apt-get install -y msodbcsql18
-
 # Install pyodbc
 RUN pip install pyodbc
 
