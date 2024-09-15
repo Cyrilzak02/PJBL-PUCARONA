@@ -1,4 +1,3 @@
-from Tools.scripts.make_ctype import method
 from flask import Flask
 from Entities.Corrida import db
 from Controllers.ControllerCorrida import corrida_controller
