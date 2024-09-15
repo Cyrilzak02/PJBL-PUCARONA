@@ -1,6 +1,7 @@
 # Use the official Python image from DockerHub as the base image
 FROM python:3.10-slim
 
+# Set environment variables to avoid writing .pyc files and enable unbuffered output
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
@@ -11,19 +12,18 @@ RUN apt-get update && apt-get install -y \
     unixodbc-dev
 
 # Install the Microsoft ODBC Driver for SQL Server
-RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
-    curl https://packages.microsoft.com/config/debian/$(lsb_release -rs)/prod.list > /etc/apt/sources.list.d/mssql-release.list && \
+RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.asc.gpg && \
+    curl https://packages.microsoft.com/config/debian/buster/prod.list > /etc/apt/sources.list.d/mssql-release.list && \
     apt-get update && \
     ACCEPT_EULA=Y apt-get install -y msodbcsql18
 
 # Install pyodbc
 RUN pip install pyodbc
-# Set environment variables to avoid writing .pyc files and enable unbuffered output
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container (update the path)
+# Copy the requirements file into the container
 COPY ./requirements.txt /app/
 
 # Install Python dependencies
