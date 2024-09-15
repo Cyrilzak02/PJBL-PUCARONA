@@ -4,7 +4,7 @@ db = SQLAlchemy()
 
 
 class Corrida(db.Model):
-    __tablename__ = 'corridas'
+    __tablename__ = 'dbo.Corridas'
 
     idcorrida = db.Column(db.Integer, primary_key=True, autoincrement=True)
     data_ini = db.Column(db.DateTime, nullable=False)

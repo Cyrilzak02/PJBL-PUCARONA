@@ -4,9 +4,21 @@ from Controllers.ControllerCorrida import corrida_controller
 
 app = Flask(__name__)
 
-# Configurações do banco de dados
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:1234@127.0.0.1/pucaronas'
+
+server = 'pucarona-server.database.windows.net'
+database = 'pucarona'
+username = 'admin_pucarona'
+password = '1234puc$'
+
+
+DATABASE_URI = (
+    f'mssql+pyodbc://{username}:{password}@{server}/{database}?'
+    'driver=ODBC+Driver+18+for+SQL+Server&Encrypt=yes;TrustServerCertificate=no'
+)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 
 # Inicializar SQLAlchemy
 db.init_app(app)

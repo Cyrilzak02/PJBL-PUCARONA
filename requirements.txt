@@ -2,3 +2,4 @@ Flask
 SQLAlchemy
 mysql-connector-python
 flask_sqlalchemy
+pyodbc
