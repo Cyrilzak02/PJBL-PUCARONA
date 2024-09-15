@@ -20,13 +20,13 @@ app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
-# Inicializar SQLAlchemy
+
 db.init_app(app)
 
-# Registrar o blueprint
+
 app.register_blueprint(corrida_controller)
 
-# Criar tabelas no banco de dados
+
 with app.app_context():
     db.create_all()
 
