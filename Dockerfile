@@ -15,7 +15,7 @@ COPY ./requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the entire project into the container
-COPY ./PUCarona /app/
+COPY ./PUCarona-1 /app/
 
 # Expose the port that the Flask app runs on
 EXPOSE 5000
