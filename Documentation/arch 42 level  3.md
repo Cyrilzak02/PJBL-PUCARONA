@@ -357,76 +357,18 @@ See  [Runtime View](https://docs.arc42.org/section-6/)  in the arc42 documentati
 
 **Content**
 
-This section describes overall, principal regulations and solution ideas that are relevant in multiple parts (= cross-cutting) of your system. Such concepts are often related to multiple building blocks. They can include many different topics, such as
+| Conceitos | Descrição |
+|-----------|-----------|
+| Autenticação e Autorização     | Tanto motoristas quanto alunos precisam de autenticação para acessar suas funcionalidades específicas (motoristas oferecendo caronas, alunos solicitando). Um sistema robusto de autorização deve garantir que apenas os usuários corretos tenham acesso a determinadas informações. |
+| Proteção de Dados Pessoais     | Como haverá troca de dados sensíveis (informações de contato, rotas de viagem), é crucial garantir que todas as informações estejam protegidas por criptografia (em trânsito e em repouso). |
+| Regulamentação       | A conformidade com leis de proteção de dados, como a LGPD (Lei Geral de Proteção de Dados), deve ser um conceito transversal a todo o sistema. |
+| Persistência      | A aplicação deve armazenar informações de usuários (alunos e motoristas), além de dados sobre as caronas oferecidas e aceitas. É importante definir onde e como esses dados serão armazenados de maneira eficiente e segura |
+| Auditabilidade        | Manter registros de transações, como histórico de caronas e trocas de mensagens entre alunos e motoristas, pode ser necessário para garantir transparência e segurança. |
+| Monitoramento       | Monitorar o uso do sistema, especialmente em tempo real, para detectar possíveis falhas, tentativas de acesso não autorizado ou comportamento incomum. |
+| Comunicação por chat       |Pode ser necessário um sistema de notificação para avisar motoristas e alunos sobre caronas confirmadas, cancelamentos, etc. Esse conceito pode afetar diferentes partes do sistema, como o backend, que enviará notificações para aplicativos móveis ou via SMS/email. |
+| Concorrência de Acessos       | Como o sistema pode ter várias pessoas requisitando ou oferecendo caronas ao mesmo tempo, é fundamental garantir que o sistema lide bem com a concorrência. Situações como dois usuários aceitando a mesma carona simultaneamente precisam ser prevenidas ou resolvidas adequadamente. |
 
--   models, especially domain models
-    
--   architecture or design patterns
-    
--   rules for using specific technology
-    
--   principal, often technical decisions of an overarching (= cross-cutting) nature
-    
--   implementation rules
-    
 
-**Motivation**
-
-Concepts form the basis for  _conceptual integrity_  (consistency, homogeneity) of the architecture. Thus, they are an important contribution to achieve inner qualities of your system.
-
-Some of these concepts cannot be assigned to individual building blocks, e.g. security or safety.
-
-**Form**
-
-The form can be varied:
-
--   concept papers with any kind of structure
-    
--   cross-cutting model excerpts or scenarios using notations of the architecture views
-    
--   sample implementations, especially for technical concepts
-    
--   reference to typical usage of standard frameworks (e.g. using Hibernate for object/relational mapping)
-    
-
-**Structure**
-
-A potential (but not mandatory) structure for this section could be:
-
--   Domain concepts
-    
--   User Experience concepts (UX)
-    
--   Safety and security concepts
-    
--   Architecture and design patterns
-    
--   "Under-the-hood"
-    
--   development concepts
-    
--   operational concepts
-    
-
-Note: it might be difficult to assign individual concepts to one specific topic on this list.
-
-[![Possible topics for crosscutting concepts](https://github.com/Cyrilzak02/PJBL-PUCARONA/raw/main/images/08-Crosscutting-Concepts-Structure-EN.png)](https://github.com/Cyrilzak02/PJBL-PUCARONA/blob/main/images/08-Crosscutting-Concepts-Structure-EN.png)
-
-See  [Concepts](https://docs.arc42.org/section-8/)  in the arc42 documentation.
-
-## _<Concept 1>_
-
-_<explanation>_
-
-## _<Concept 2>_
-
-_<explanation>_
-
-…
-
-## _<Concept n>_
-
-_<explanation>_
 
 # Architecture Decisions
 
