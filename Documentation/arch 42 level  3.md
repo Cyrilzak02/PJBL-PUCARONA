@@ -413,53 +413,18 @@ See  [Runtime View](https://docs.arc42.org/section-6/)  in the arc42 documentati
 
 # Risks and Technical Debts
 
-**Contents**
-
-A list of identified technical risks or technical debts, ordered by priority
-
-**Motivation**
-
-“Risk management is project management for grown-ups” (Tim Lister, Atlantic Systems Guild.)
-
-This should be your motto for systematic detection and evaluation of risks and technical debts in the architecture, which will be needed by management stakeholders (e.g. project managers, product owners) as part of the overall risk analysis and measurement planning.
-
-**Form**
-
-List of risks and/or technical debts, probably including suggested measures to minimize, mitigate or avoid risks or reduce technical debts.
-
-See  [Risks and Technical Debt](https://docs.arc42.org/section-11/)  in the arc42 documentation.
+| **Risco**                        | **Descrição**                                                                                             |
+|----------------------------------|-----------------------------------------------------------------------------------------------------------|
+| **Complexidade de Manutenção**   | A utilização de múltiplos microserviços pode aumentar a complexidade de manutenção e depuração do sistema. |
+| **Latência de Comunicação**      | A comunicação entre microserviços pode introduzir latência adicional, impactando o desempenho geral.     |
+| **Gerenciamento de Estado**      | Manter o estado consistente entre microserviços pode ser desafiador e propenso a erros.                  |
+| **Consistência de Dados**        | Garantir a consistência dos dados entre os microserviços pode ser complicado e exigir sincronização adicional. |
+| **Complexidade na Integração**   | A integração de novos serviços ou funcionalidades pode ser complexa e exigir alterações significativas na API. |
 
 # Glossary
 
-**Contents**
-
-The most important domain and technical terms that your stakeholders use when discussing the system.
-
-You can also see the glossary as source for translations if you work in multi-language teams.
-
-**Motivation**
-
-You should clearly define your terms, so that all stakeholders
-
--   have an identical understanding of these terms
-    
--   do not use synonyms and homonyms
-    
-
-A table with columns <Term> and <Definition>.
-
-Potentially more columns in case you need translations.
-
-See  [Glossary](https://docs.arc42.org/section-12/)  in the arc42 documentation.
-
-Term
-
-Definition
-
-_<Term-1>_
-
-_<definition-1>_
-
-_<Term-2>_
-
-_<definition-2>_
+| **Termo**            | **Descrição**                                                                                             |
+|----------------------|-----------------------------------------------------------------------------------------------------------|
+| **Geolocalização**   | Tecnologia que permite determinar a localização geográfica de um dispositivo ou usuário em tempo real, geralmente usando GPS, torres de celular ou redes Wi-Fi. É fundamental para funcionalidades baseadas em localização, como encontrar caronas próximas. |
+| **Boleia Partilhada**| Sistema onde indivíduos que fazem trajetos semelhantes compartilham uma mesma viagem para reduzir custos e impacto ambiental. Também conhecido como "carona" ou "carpool." |
+| **Carpool**          | Prática de compartilhamento de veículos entre pessoas que têm trajetos semelhantes, visando economizar combustível e reduzir o tráfego. É frequentemente organizado por meio de aplicativos ou plataformas online que conectam motoristas e passageiros. |
