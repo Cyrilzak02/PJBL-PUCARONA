@@ -411,7 +411,7 @@ See  [Runtime View](https://docs.arc42.org/section-6/)  in the arc42 documentati
 
 # Evidencias
 **Azure Functions**
-![GET](evidencias/AzureFunctions/get.png)
+![GET](./evidencias/AzureFunctions/get.png)
 [Link das functions]([URL](https://crudusuariospuc.azurewebsites.net/api/consultarUsuario/%7Buser_id%7D?code=Pd_w9npKSfvnSfEIJiaaIkrBwMyRjEx6WtYG07TAMf-6AzFuotuk5g%3D%3D))
 
 ![POST](evidencias/AzureFunctions/post.png)
