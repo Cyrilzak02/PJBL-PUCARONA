@@ -426,5 +426,7 @@ See  [Runtime View](https://docs.arc42.org/section-6/)  in the arc42 documentati
 | **Termo**            | **Descrição**                                                                                             |
 |----------------------|-----------------------------------------------------------------------------------------------------------|
 | **Geolocalização**   | Tecnologia que permite determinar a localização geográfica de um dispositivo ou usuário em tempo real, geralmente usando GPS, torres de celular ou redes Wi-Fi. É fundamental para funcionalidades baseadas em localização, como encontrar caronas próximas. |
-| **Boleia Partilhada**| Sistema onde indivíduos que fazem trajetos semelhantes compartilham uma mesma viagem para reduzir custos e impacto ambiental. Também conhecido como "carona" ou "carpool." |
-| **Carpool**          | Prática de compartilhamento de veículos entre pessoas que têm trajetos semelhantes, visando economizar combustível e reduzir o tráfego. É frequentemente organizado por meio de aplicativos ou plataformas online que conectam motoristas e passageiros. |
+| **Estudante**| Aluno que pode ser ou motorista ou passageiro" |
+| **Motorista**| Aluno que possui automóvel e irá dar carona." |
+| **Passageiro**| Aluno que receberá a carona." |
+| **Carona**| Função principal da plataforma, prática de compartilhamento de veículos entre pessoas que têm trajetos semelhantes, visando economizar combustível e reduzir o tráfego. É frequentemente organizado por meio de aplicativos ou plataformas online que conectam motoristas e passageiros." |
