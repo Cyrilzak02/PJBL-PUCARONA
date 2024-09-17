@@ -412,20 +412,20 @@ See  [Runtime View](https://docs.arc42.org/section-6/)  in the arc42 documentati
 # Evidencias
 **Azure Functions**
 ![GET](../evidencias/AzureFunctions/get.png)
-[Link das functions]([URL](https://crudusuariospuc.azurewebsites.net/api/consultarUsuario/%7Buser_id%7D?code=Pd_w9npKSfvnSfEIJiaaIkrBwMyRjEx6WtYG07TAMf-6AzFuotuk5g%3D%3D))
+[Link das functions](https://crudusuariospuc.azurewebsites.net/api/consultarUsuario/%7Buser_id%7D?code=Pd_w9npKSfvnSfEIJiaaIkrBwMyRjEx6WtYG07TAMf-6AzFuotuk5g%3D%3D)
 
 ![POST](../evidencias/AzureFunctions/post.png)
-[Link das functions]([URL](https://crudusuariospuc.azurewebsites.net/api/CriarUsuario?code=Pd_w9npKSfvnSfEIJiaaIkrBwMyRjEx6WtYG07TAMf-6AzFuotuk5g%3D%3D))
+[Link das functions](https://crudusuariospuc.azurewebsites.net/api/CriarUsuario?code=Pd_w9npKSfvnSfEIJiaaIkrBwMyRjEx6WtYG07TAMf-6AzFuotuk5g%3D%3D)
 
 ![PUT](../evidencias/AzureFunctions/put.png)
-[Link das functions]([URL](https://crudusuariospuc.azurewebsites.net/api/atualizarUsuario?code=Pd_w9npKSfvnSfEIJiaaIkrBwMyRjEx6WtYG07TAMf-6AzFuotuk5g%3D%3D))
+[Link das functions](https://crudusuariospuc.azurewebsites.net/api/atualizarUsuario?code=Pd_w9npKSfvnSfEIJiaaIkrBwMyRjEx6WtYG07TAMf-6AzFuotuk5g%3D%3D)
 
 ![DELETE](../evidencias/AzureFunctions/delete.png)
-[Link das functions]([URL](https://crudusuariospuc.azurewebsites.net/api/deletarUsuario/%7Buser_id%7D?code=Pd_w9npKSfvnSfEIJiaaIkrBwMyRjEx6WtYG07TAMf-6AzFuotuk5g%3D%3D))
+[Link das functions](https://crudusuariospuc.azurewebsites.net/api/deletarUsuario/%7Buser_id%7D?code=Pd_w9npKSfvnSfEIJiaaIkrBwMyRjEx6WtYG07TAMf-6AzFuotuk5g%3D%3D)
 
 
 **Link para o repositorio**
-[Repositorio do codigo Azure Functions]([URL](https://github.com/JulioDomanski/PUCaronasFunctions))
+[Repositorio do codigo Azure Functions](https://github.com/JulioDomanski/PUCaronasFunctions)
 
 
 **BackEnd**
@@ -435,7 +435,7 @@ See  [Runtime View](https://docs.arc42.org/section-6/)  in the arc42 documentati
 ![DELETE](../evidencias/BackEndpucaronas/delete.png)
 
 **Link para o repositorio**
-[Repositorio do codigo BackEnd]([URL](https://github.com/Cyrilzak02/PJBL-PUCARONA/tree/main/PUCarona-1))
+[Repositorio do codigo BackEnd](https://github.com/Cyrilzak02/PJBL-PUCARONA/tree/main/PUCarona-1)
 
 **Docker**
 ![Docker Hub](../evidencias/dockerhubPucaronas/dockerhub.png)
@@ -443,7 +443,7 @@ See  [Runtime View](https://docs.arc42.org/section-6/)  in the arc42 documentati
 ![GET](../evidencias/dockerhubPucaronas/dockerRun.png)
 
 **Link para o repositorio**
-[Docker Hub]([URL](https://hub.docker.com/layers/pussy133/pucarona/56/images/sha256-d2c03cc68e84f8730a4818f5534421c5c6ee90d10b0f05af6e0dd17788d4b049?context=explore))
+[Docker Hub](https://hub.docker.com/layers/pussy133/pucarona/56/images/sha256-d2c03cc68e84f8730a4818f5534421c5c6ee90d10b0f05af6e0dd17788d4b049?context=explore)
 
 
 
