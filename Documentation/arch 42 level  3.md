@@ -11,7 +11,7 @@ This version of the template contains some help and explanations. It is used for
 
 # Introduction and Goals
 
-O objetivo deste projeto é desenvolver e implementar um aplicativo móvel que simplifique a organização de caronas entre estudantes universitários. A proposta visa promover a mobilidade sustentável e segura dentro das comunidades acadêmicas, incentivando o compartilhamento de veículos entre os alunos. Com funcionalidades intuitivas e de fácil acesso, o aplicativo permitirá que os usuários encontrem e ofereçam caronas de maneira eficiente, contribuindo para a redução do número de veículos em circulação, diminuindo a pegada de carbono e fortalecendo os laços sociais entre os membros da comunidade universitária.
+O objetivo deste projeto é desenvolver e implementar um aplicativo móvel que simplifique a organização de caronas entre estudantes universitários. A proposta visa promover a mobilidade sustentável e segura dentro das comunidades acadêmicas, incentivando o compartilhamento de veículos entre os passageiross. Com funcionalidades intuitivas e de fácil acesso, o aplicativo permitirá que os usuários encontrem e ofereçam caronas de maneira eficiente, contribuindo para a redução do número de veículos em circulação, diminuindo a pegada de carbono e fortalecendo os laços sociais entre os membros da comunidade universitária.
 
 **Link para System Design**
 [Sytem Design](https://lucid.app/lucidchart/45490cdb-a854-421d-882d-b4308453c515/edit?viewport_loc=-2625%2C-675%2C4870%2C2126%2C0_0&invitationId=inv_085c1335-7e13-452c-94fc-d7ad48468d4e)
@@ -24,7 +24,7 @@ O objetivo deste projeto é desenvolver e implementar um aplicativo móvel que s
 | 2          | O sistema deve implementar um chat em tempo real  |
 | 3          | O sistema deve implementar uma carteira virtual    |
 | 4          | O sistema deve implementar geolocalização através de uma API |
-| 5          | O sistema deve ser capaz de autenticar alunos      |
+| 5          | O sistema deve ser capaz de autenticar passageiross      |
 
 
 
@@ -362,13 +362,13 @@ See  [Runtime View](https://docs.arc42.org/section-6/)  in the arc42 documentati
 
 | Conceitos | Descrição |
 |-----------|-----------|
-| Autenticação e Autorização     | Tanto motoristas quanto alunos precisam de autenticação para acessar suas funcionalidades específicas (motoristas oferecendo caronas, alunos solicitando). Um sistema robusto de autorização deve garantir que apenas os usuários corretos tenham acesso a determinadas informações. |
+| Autenticação e Autorização     | Tanto motoristas quanto passageiros precisam de autenticação para acessar suas funcionalidades específicas (motoristas oferecendo caronas, passageiros solicitando). Um sistema robusto de autorização deve garantir que apenas os usuários corretos tenham acesso a determinadas informações. |
 | Proteção de Dados Pessoais     | Como haverá troca de dados sensíveis (informações de contato, rotas de viagem), é crucial garantir que todas as informações estejam protegidas por criptografia (em trânsito e em repouso). |
 | Regulamentação       | A conformidade com leis de proteção de dados, como a LGPD (Lei Geral de Proteção de Dados), deve ser um conceito transversal a todo o sistema. |
-| Persistência      | A aplicação deve armazenar informações de usuários (alunos e motoristas), além de dados sobre as caronas oferecidas e aceitas. É importante definir onde e como esses dados serão armazenados de maneira eficiente e segura |
-| Auditabilidade        | Manter registros de transações, como histórico de caronas e trocas de mensagens entre alunos e motoristas, pode ser necessário para garantir transparência e segurança. |
+| Persistência      | A aplicação deve armazenar informações de usuários (passageiros e motoristas), além de dados sobre as caronas oferecidas e aceitas. É importante definir onde e como esses dados serão armazenados de maneira eficiente e segura |
+| Auditabilidade        | Manter registros de transações, como histórico de caronas e trocas de mensagens entre passageiross e motoristas, pode ser necessário para garantir transparência e segurança. |
 | Monitoramento       | Monitorar o uso do sistema, especialmente em tempo real, para detectar possíveis falhas, tentativas de acesso não autorizado ou comportamento incomum. |
-| Comunicação por chat       |Pode ser necessário um sistema de notificação para avisar motoristas e alunos sobre caronas confirmadas, cancelamentos, etc. Esse conceito pode afetar diferentes partes do sistema, como o backend, que enviará notificações para aplicativos móveis ou via SMS/email. |
+| Comunicação por chat       |Pode ser necessário um sistema de notificação para avisar motoristas e passageiross sobre caronas confirmadas, cancelamentos, etc. Esse conceito pode afetar diferentes partes do sistema, como o backend, que enviará notificações para aplicativos móveis ou via SMS/email. |
 | Concorrência de Acessos       | Como o sistema pode ter várias pessoas requisitando ou oferecendo caronas ao mesmo tempo, é fundamental garantir que o sistema lide bem com a concorrência. Situações como dois usuários aceitando a mesma carona simultaneamente precisam ser prevenidas ou resolvidas adequadamente. |
 
 
@@ -409,6 +409,10 @@ See  [Runtime View](https://docs.arc42.org/section-6/)  in the arc42 documentati
    - O sistema deve permitir a adição de novas funcionalidades com impacto mínimo.
    - Métrica: Tempo de introdução de novas funcionalidades não excede 2 semanas.
 
+# Evidencias
+![Texto alternativo](evidencias/AzureFunctions/get.webp)
+
+
 
 
 # Risks and Technical Debts
@@ -426,5 +430,7 @@ See  [Runtime View](https://docs.arc42.org/section-6/)  in the arc42 documentati
 | **Termo**            | **Descrição**                                                                                             |
 |----------------------|-----------------------------------------------------------------------------------------------------------|
 | **Geolocalização**   | Tecnologia que permite determinar a localização geográfica de um dispositivo ou usuário em tempo real, geralmente usando GPS, torres de celular ou redes Wi-Fi. É fundamental para funcionalidades baseadas em localização, como encontrar caronas próximas. |
-| **Boleia Partilhada**| Sistema onde indivíduos que fazem trajetos semelhantes compartilham uma mesma viagem para reduzir custos e impacto ambiental. Também conhecido como "carona" ou "carpool." |
-| **Carpool**          | Prática de compartilhamento de veículos entre pessoas que têm trajetos semelhantes, visando economizar combustível e reduzir o tráfego. É frequentemente organizado por meio de aplicativos ou plataformas online que conectam motoristas e passageiros. |
+| **Estudante/Aluno**| Usuários que podem ser motoristas ou passageiros. |
+| **Motorista**| passageiros que possui automóvel e irá dar carona. |
+| **Passageiro**| passageiros que receberá a carona. |
+| **Carona**| Função principal da plataforma, prática de compartilhamento de veículos entre pessoas que têm trajetos semelhantes, visando economizar combustível e reduzir o tráfego. É frequentemente organizado por meio de aplicativos ou plataformas online que conectam motoristas e passageiros. |
