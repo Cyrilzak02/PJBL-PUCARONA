@@ -412,7 +412,7 @@ See  [Runtime View](https://docs.arc42.org/section-6/)  in the arc42 documentati
 # Evidencias
 **Azure Functions**
 ![GET](../evidencias/AzureFunctions/get.png)
-[Link Function GET](https://crudusuariospuc.azurewebsites.net/api/consultarUsuario/%7Buser_id%7D?code=Pd_w9npKSfvnSfEIJiaaIkrBwMyRjEx6WtYG07TAMf-6AzFuotuk5g%3D%3D)
+[Link Function GET](https://crudusuariospuc.azurewebsites.net/api/consultarUsuario/66e1f61e26072be9dd0b3430?code=Pd_w9npKSfvnSfEIJiaaIkrBwMyRjEx6WtYG07TAMf-6AzFuotuk5g%3D%3D)
 
 ![POST](../evidencias/AzureFunctions/post.png)
 [Link Function POST](https://crudusuariospuc.azurewebsites.net/api/CriarUsuario?code=Pd_w9npKSfvnSfEIJiaaIkrBwMyRjEx6WtYG07TAMf-6AzFuotuk5g%3D%3D)
