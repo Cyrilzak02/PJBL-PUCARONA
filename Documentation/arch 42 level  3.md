@@ -409,6 +409,10 @@ See  [Runtime View](https://docs.arc42.org/section-6/)  in the arc42 documentati
    - O sistema deve permitir a adição de novas funcionalidades com impacto mínimo.
    - Métrica: Tempo de introdução de novas funcionalidades não excede 2 semanas.
 
+# Evidencias
+![Texto alternativo](evidencias/AzureFunctions/get.webp)
+
+
 
 
 # Risks and Technical Debts
