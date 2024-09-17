@@ -11,7 +11,7 @@ This version of the template contains some help and explanations. It is used for
 
 # Introduction and Goals
 
-O objetivo deste projeto é desenvolver e implementar um aplicativo móvel que simplifique a organização de caronas entre estudantes universitários. A proposta visa promover a mobilidade sustentável e segura dentro das comunidades acadêmicas, incentivando o compartilhamento de veículos entre os passageiross. Com funcionalidades intuitivas e de fácil acesso, o aplicativo permitirá que os usuários encontrem e ofereçam caronas de maneira eficiente, contribuindo para a redução do número de veículos em circulação, diminuindo a pegada de carbono e fortalecendo os laços sociais entre os membros da comunidade universitária.
+O objetivo deste projeto é desenvolver e implementar um aplicativo móvel que simplifique a organização de caronas entre estudantes universitários. A proposta visa promover a mobilidade sustentável e segura dentro das comunidades acadêmicas, incentivando o compartilhamento de veículos entre os alunos. Com funcionalidades intuitivas e de fácil acesso, o aplicativo permitirá que os usuários encontrem e ofereçam caronas de maneira eficiente, contribuindo para a redução do número de veículos em circulação, diminuindo a pegada de carbono e fortalecendo os laços sociais entre os membros da comunidade universitária.
 
 **Link para System Design**
 [Sytem Design](https://lucid.app/lucidchart/45490cdb-a854-421d-882d-b4308453c515/edit?viewport_loc=-2625%2C-675%2C4870%2C2126%2C0_0&invitationId=inv_085c1335-7e13-452c-94fc-d7ad48468d4e)
@@ -24,7 +24,7 @@ O objetivo deste projeto é desenvolver e implementar um aplicativo móvel que s
 | 2          | O sistema deve implementar um chat em tempo real  |
 | 3          | O sistema deve implementar uma carteira virtual    |
 | 4          | O sistema deve implementar geolocalização através de uma API |
-| 5          | O sistema deve ser capaz de autenticar passageiross      |
+| 5          | O sistema deve ser capaz de autenticar alunos      |
 
 
 
@@ -465,7 +465,7 @@ See  [Runtime View](https://docs.arc42.org/section-6/)  in the arc42 documentati
 | **Termo**            | **Descrição**                                                                                             |
 |----------------------|-----------------------------------------------------------------------------------------------------------|
 | **Geolocalização**   | Tecnologia que permite determinar a localização geográfica de um dispositivo ou usuário em tempo real, geralmente usando GPS, torres de celular ou redes Wi-Fi. É fundamental para funcionalidades baseadas em localização, como encontrar caronas próximas. |
-| **Estudante/Aluno**| Usuários que podem ser motoristas ou passageiros. |
-| **Motorista**| passageiros que possui automóvel e irá dar carona. |
-| **Passageiro**| passageiros que receberá a carona. |
+| **Estudante/Aluno**| Usuários que são alunos da instituição e podem ser motoristas ou passageiros. |
+| **Motorista**| Aluno que possui automóvel e irá dar carona. |
+| **Passageiro**| Aluno que receberá a carona. |
 | **Carona**| Função principal da plataforma, prática de compartilhamento de veículos entre pessoas que têm trajetos semelhantes, visando economizar combustível e reduzir o tráfego. É frequentemente organizado por meio de aplicativos ou plataformas online que conectam motoristas e passageiros. |
