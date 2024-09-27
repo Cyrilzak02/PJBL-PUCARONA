@@ -35,12 +35,13 @@ def get_corridas():
         result = []
         for corrida in corridas:
             corrida_data = {
-                'idcorrida': corrida.idcorrida,
+                'id_corrida': corrida.id_corrida,
                 'data_ini': corrida.data_ini.strftime('%Y-%m-%d %H:%M:%S'),
                 'data_fim': corrida.data_fim.strftime('%Y-%m-%d %H:%M:%S'),
                 'end_origem': corrida.end_origem,
                 'end_fim': corrida.end_fim,
-                'status': corrida.status
+                'status': corrida.status,
+                'id_usuario' : corrida.id_usuario
             }
             result.append(corrida_data)
 
@@ -57,12 +58,13 @@ def get_corrida(id):
         corrida = Corrida.query.get(id)
         if corrida:
             corrida_data = {
-                'idcorrida': corrida.idcorrida,
+                'id_corrida': corrida.id_corrida,
                 'data_ini': corrida.data_ini.strftime('%Y-%m-%d %H:%M:%S'),
                 'data_fim': corrida.data_fim.strftime('%Y-%m-%d %H:%M:%S'),
                 'end_origem': corrida.end_origem,
                 'end_fim': corrida.end_fim,
                 'status': corrida.status
+
             }
             return jsonify(corrida_data)
         else:
