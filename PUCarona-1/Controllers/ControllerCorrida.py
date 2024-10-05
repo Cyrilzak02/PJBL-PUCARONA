@@ -52,23 +52,27 @@ def get_corridas():
 
 
 # Buscar uma corrida específica por ID
-@corrida_controller.route('/get_corrida/<int:id>', methods=['GET'])
+@corrida_controller.route('/get_corrida/<string:id>', methods=['GET'])
 def get_corrida(id):
     try:
-        corrida = Corrida.query.get(id)
-        if corrida:
-            corrida_data = {
-                'id_corrida': corrida.id_corrida,
-                'data_ini': corrida.data_ini.strftime('%Y-%m-%d %H:%M:%S'),
-                'data_fim': corrida.data_fim.strftime('%Y-%m-%d %H:%M:%S'),
-                'end_origem': corrida.end_origem,
-                'end_fim': corrida.end_fim,
-                'status': corrida.status
+        corridas = Corrida.query.filter_by(id_usuario=id).all()
+        if corridas:
+            # Create a list of corrida data
+            corridas_data = []
+            for corrida in corridas:
+                corrida_data = {
+                    'id_corrida': corrida.id_corrida,
+                    'data_ini': corrida.data_ini.strftime('%Y-%m-%d %H:%M:%S'),
+                    'data_fim': corrida.data_fim.strftime('%Y-%m-%d %H:%M:%S'),
+                    'end_origem': corrida.end_origem,
+                    'end_fim': corrida.end_fim,
+                    'status': corrida.status
+                }
+                corridas_data.append(corrida_data)
 
-            }
-            return jsonify(corrida_data)
+            return jsonify(corridas_data), 200
         else:
-            return jsonify({"message": "Corrida não encontrada"}), 404
+            return jsonify({"message": "Nenhuma corrida encontrada para este usuário"}), 404
 
     except Exception as e:
         return jsonify({"error": str(e)}), 400
