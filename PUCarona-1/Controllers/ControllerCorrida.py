@@ -15,9 +15,11 @@ def add_corrida():
         end_origem = data.get('end_origem')
         end_fim = data.get('end_fim')
         status = data.get('status')
+        id_usuario = data.get('id_usuario')
+
 
         new_corrida = Corrida(data_ini=data_ini, data_fim=data_fim, end_origem=end_origem, end_fim=end_fim,
-                              status=status)
+                              status=status,id_usuario=id_usuario)
         db.session.add(new_corrida)
         db.session.commit()
 
