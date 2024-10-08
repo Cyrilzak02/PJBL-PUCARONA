@@ -87,7 +87,7 @@ def deletar_corrida(id):
         if corrida:
             db.session.delete(corrida)
             db.session.commit()
-            return jsonify({"message": "Corrida deletada com sucesso!"}), 204
+            return '', 204
 
         else:
             return jsonify({"message": "Corrida não encontrada"}), 404
