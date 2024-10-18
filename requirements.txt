@@ -2,3 +2,5 @@ Flask
 SQLAlchemy
 mysql-connector-python
 flask_sqlalchemy
+azure-servicebus==7.12.3
+
