@@ -409,6 +409,63 @@ See  [Runtime View](https://docs.arc42.org/section-6/)  in the arc42 documentati
    - O sistema deve permitir a adição de novas funcionalidades com impacto mínimo.
    - Métrica: Tempo de introdução de novas funcionalidades não excede 2 semanas.
 
+## Cenário 1
+
+- **Situação:** O aluno solicita informações de caronas disponíveis para um determinado trajeto.
+- **Estímulo:** O sistema precisa responder à solicitação do aluno.
+- **Resposta esperada:** O sistema deve fornecer uma resposta rápida.
+
+### Atributos de Qualidade
+- Eficiência de desempenho e satisfação.
+
+### Decisão Arquitetural
+- Escolha entre o uso de microserviços ou estrutura monolítica.
+
+### Trade-offs
+- Os microserviços permitem uma escalabilidade futura e maior otimização do software dividindo as responsabilidades do software e balanceando a carga, mas tornam a implementação e manutenção mais complexa.
+- Já os monolitos apresentam menor sobrecarga de comunicação entre componentes, gerando menos latência, mas têm menor escalabilidade.
+
+### Resultados
+- Devido à possibilidade de escalabilidade futura, o uso de microserviços será ideal para o projeto, por conta da sua maior otimização.
+
+---
+
+## Cenário 2
+
+- O sistema deverá ter um alto índice de segurança de código.
+
+### Atributos de Qualidade
+- Segurança.
+
+### Decisão Arquitetural
+- Escolha entre o uso de ferramentas de análise de segurança de código ou não.
+
+### Trade-offs
+- Adotar o uso de alguma ferramenta de segurança de código, como por exemplo o SonarQube, pode identificar falhas ou brechas de segurança no código. No entanto, o uso da ferramenta pode gerar custos adicionais para o projeto.
+
+### Resultados
+- A implementação de uma ferramenta de segurança de códigos deverá ser adotada. Para mitigar o risco de custos adicionais para o projeto, deverá ser analisada a possibilidade de implementação de uma ferramenta open source.
+
+---
+
+## Cenário 3
+
+- O sistema precisa ser atualizado frequentemente para incluir novas funcionalidades e corrigir bugs.
+
+### Atributos de Qualidade
+- Manutenibilidade.
+
+### Decisão Arquitetural
+- Escolha entre o uso de microserviços ou estrutura monolítica.
+
+### Trade-offs
+- A separação em microserviços facilita a manutenção, pois cada serviço pode ser atualizado de forma independente sem afetar todo o sistema. Entretanto, esse tipo de arquitetura aumenta a complexidade do gerenciamento de dependências e a comunicação entre os serviços.
+- Já o monolito é mais fácil de manter em termos de simplicidade estrutural, mas as mudanças podem impactar várias partes do sistema, tornando a evolução mais difícil com o tempo.
+
+### Resultados
+- Devido à necessidade de atualizações frequentes e de minimização do impacto durante manutenções, uma arquitetura de microserviços será ideal, pois oferece maior modularidade e flexibilidade.
+
+
 # Evidencias
 **Azure Functions**
 ![GET](../evidencias/AzureFunctions/get.png)
